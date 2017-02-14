@@ -244,8 +244,6 @@ defaults:
       layout: single
       author_profile: true
       share: true
-
-defaults:
   # _posts
   - scope:
       path: ""
