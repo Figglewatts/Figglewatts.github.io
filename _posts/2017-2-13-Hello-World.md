@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "Fiona sucks"
-categories: test initial portfolio
-tags: tag1 tag2
+categories: portfolio
+tags: tag1
 ---
 
 Fiona sucks a lot
