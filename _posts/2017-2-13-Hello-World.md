@@ -1,11 +1,10 @@
 ---
-layout: single
-title:  "Fiona sucks"
-categories: portfolio
+title:  "Test post"
+categories: test
 tags: tag1
 ---
 
-Fiona sucks a lot
+Hello world!
 
 ``` java
 public static void main(string[] args) {
