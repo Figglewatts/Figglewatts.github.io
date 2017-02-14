@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "Sam's Blog"
+title                    : "Sam Gibson"
 title_separator          : "-"
 name                     : "Sam Gibson"
-description              : "A place where I'll write about things I do or put cool stuff I make up."
+description              : "A place where I'll write about things I do or cool stuff I make. Also there's a portfolio."
 url                      : "http://www.figglewatts.co.uk"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "figglewatts/figglewatts.github.io"
