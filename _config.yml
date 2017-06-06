@@ -234,6 +234,9 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
+  streamof:
+    output: true
+    permalink: /:collection/:path/
     
 defaults:
   # _posts
