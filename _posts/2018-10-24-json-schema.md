@@ -4,49 +4,6 @@ categories: write-up
 tags: json
 ---
 
-- [Declaring a JSON Schema](#declaring-a-json-schema)
-- [Writing a JSON Schema](#writing-a-json-schema)
-    - [The `type` keyword](#the-type-keyword)
-    - [Matching integers](#matching-integers)
-    - [Validating a `string`](#validating-a-string)
-        - [Length](#length)
-        - [Regular expressions](#regular-expressions)
-        - [Common string formats](#common-string-formats)
-    - [Validating a `number`](#validating-a-number)
-        - [Multiples](#multiples)
-        - [Ranges](#ranges)
-    - [Validating an `object`](#validating-an-object)
-        - [Validating object properties](#validating-object-properties)
-        - [Restricting additional properties](#restricting-additional-properties)
-        - [Required properties](#required-properties)
-        - [Restrict property names by pattern](#restrict-property-names-by-pattern)
-        - [Restricting number of properties](#restricting-number-of-properties)
-        - [Dependencies](#dependencies)
-            - [Property dependencies](#property-dependencies)
-            - [Schema dependencies](#schema-dependencies)
-        - [Pattern properties](#pattern-properties)
-    - [Validating an `array`](#validating-an-array)
-        - [Validating `array` items](#validating-array-items)
-            - [List validation](#list-validation)
-            - [Tuple validation](#tuple-validation)
-        - [Validating `array` length](#validating-array-length)
-        - [Validating `array` uniqueness](#validating-array-uniqueness)
-    - [The `enum` keyword](#the-enum-keyword)
-    - [The `const` keyword](#the-const-keyword)
-    - [Schema metadata](#schema-metadata)
-    - [Combining schemas](#combining-schemas)
-        - [`allOf`](#allof)
-        - [`anyOf`](#anyof)
-        - [`oneOf`](#oneof)
-        - [`not`](#not)
-- [Schema reuse](#schema-reuse)
-    - [References to other schemas](#references-to-other-schemas)
-    - [Schema identifiers](#schema-identifiers)
-    - [Using `$id` with `$ref`](#using-id-with-ref)
-- [Bibliography](#bibliography)
-
----
-
 Schemas validate against JSON files (or, *instances*). Schemas are themselves written in JSON.
 
 A Schema must be either a JSON object, or a boolean. If it's a boolean, then it simply passes or fails the JSON validation based on the value.
@@ -101,6 +58,51 @@ If it's an object, then it has properties that are applied to the instance, or *
 The RFC states that:
 
 > Validation is a process of checking assertions. Each assertion adds constraints that an instance must satisfy in order to successfully validate.
+
+---
+
+- [Declaring a JSON Schema](#declaring-a-json-schema)
+- [Writing a JSON Schema](#writing-a-json-schema)
+    - [The `type` keyword](#the-type-keyword)
+    - [Matching integers](#matching-integers)
+    - [Validating a `string`](#validating-a-string)
+        - [Length](#length)
+        - [Regular expressions](#regular-expressions)
+        - [Common string formats](#common-string-formats)
+    - [Validating a `number`](#validating-a-number)
+        - [Multiples](#multiples)
+        - [Ranges](#ranges)
+    - [Validating an `object`](#validating-an-object)
+        - [Validating object properties](#validating-object-properties)
+        - [Restricting additional properties](#restricting-additional-properties)
+        - [Required properties](#required-properties)
+        - [Restrict property names by pattern](#restrict-property-names-by-pattern)
+        - [Restricting number of properties](#restricting-number-of-properties)
+        - [Dependencies](#dependencies)
+            - [Property dependencies](#property-dependencies)
+            - [Schema dependencies](#schema-dependencies)
+        - [Pattern properties](#pattern-properties)
+    - [Validating an `array`](#validating-an-array)
+        - [Validating `array` items](#validating-array-items)
+            - [List validation](#list-validation)
+            - [Tuple validation](#tuple-validation)
+        - [Validating `array` length](#validating-array-length)
+        - [Validating `array` uniqueness](#validating-array-uniqueness)
+    - [The `enum` keyword](#the-enum-keyword)
+    - [The `const` keyword](#the-const-keyword)
+    - [Schema metadata](#schema-metadata)
+    - [Combining schemas](#combining-schemas)
+        - [`allOf`](#allof)
+        - [`anyOf`](#anyof)
+        - [`oneOf`](#oneof)
+        - [`not`](#not)
+- [Schema reuse](#schema-reuse)
+    - [References to other schemas](#references-to-other-schemas)
+    - [Schema identifiers](#schema-identifiers)
+    - [Using `$id` with `$ref`](#using-id-with-ref)
+- [Bibliography](#bibliography)
+
+---
 
 # Declaring a JSON Schema
 Since a schema is itself JSON, it's not easy to tell whether something is a schema or just regular old JSON. The `$schema` keyword is used at the root of the schema to declare that something is a schema. The value of the `$schema` keyword should be a URL to the standard that the schema was written against.
