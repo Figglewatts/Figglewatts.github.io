@@ -78,9 +78,9 @@ analytics:
 # Site Author
 author:
   name             : "Sam Gibson"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I take caffeine and snacks and convert them into code. You can normally find me doing some kind of game development."
-  location         : "Norfolk, United Kingdom"
+  avatar           : "/assets/images/bio-photo.jpg"
+  bio              : "Software Engineer working in Cyber Security. I also like computer graphics and big data."
+  location         : "United Kingdom"
   email            : "me@figglewatts.co.uk"
   uri              :
   bitbucket        :
